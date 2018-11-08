@@ -29,8 +29,9 @@ public class ProjetoDAO {
        
        return lista;
    }
-   public Aluno buscarPeloId(final String id){
-       Session sessao = HibernateUtil.getSessionFactory().openSession();
-       return entityManager.find(Aluno.class, id);
+   public Projeto buscarPeloId(final String id){
+       Session sessao;
+       sessao = HibernateUtil.getSessionFactory().openSession();
+       return entityManager.find(Projeto.class, id);
    }
 }
